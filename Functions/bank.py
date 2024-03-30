@@ -1,3 +1,6 @@
+# Sistema bancário em Python com uso de funções a fim de otimizar o código
+# Feito como uma resolução desafio para uma formação de Python AI Developer Backend
+
 import sys
 
 def iniciar_interacao(usuarios, contas):
@@ -109,7 +112,7 @@ def oferta_opcoes_conta(conta):
     print("Selecione uma opção.\n")
     opcao = int(input("\n1 - Realizar depósito : " +
                       "\n2 - Realizar saque : " +
-                      "\n3 - Obter extrato : "))
+                      "\n3 - Obter extrato : \n"))
                           
     if opcao == 1:
         realizar_deposito(conta)
@@ -153,6 +156,8 @@ def remover_conta(usuario, contas):
                 contas.remove(conta)
             else:
                 print("Opção impossível.\n")
+        else:
+            contas.remove(conta)
     else:
         print("Conta não encontrada.\n")
 
